@@ -1,52 +1,59 @@
 .container {
     max-width: 400px;
+    width: 90%;
     margin: 10vh auto 0 auto;
     box-shadow: 0px 0px 40px 15px rgb(27, 160, 184);
 }
 
-#h1{
-    font-family: Georgia;
+#h1 {
+    font-family: Georgia, serif;
     color: rgb(22, 66, 37);
     text-align: center;
-    font-size: xx-large;
+    font-size: 2rem;
 }
 
-#h2{
+#h2 {
     font-family: serif;
     color: rgb(236, 161, 63);
     text-align: center;
-    font-size: large;
+    font-size: 1.25rem;
 }
+
 #display {
     text-align: right;
     height: 50px;
     line-height: 50px;
     padding: 16px 8px;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
+
 .buttons {
     display: grid;
     color: blanchedalmond;
     background-color: black;
     border-bottom: 1px solid rgb(12, 12, 12);
     border-left: 1px solid rgb(12, 12, 12);
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
 }
-#enter{
+
+#enter {
     text-align: center;
     grid-column: span 2;
 }
+
 .buttons > div {
     border-top: 1px solid rgb(12, 12, 12);
     border-right: 1px solid rgb(12, 12, 12);
 }
+
 .button {
     border: 0.5px solid #999;
     line-height: 90px;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25rem;
     cursor: pointer;
 }
+
 #equal {
     background-color: blanchedalmond;
     color: black;
@@ -56,4 +63,24 @@
     background-color: #f7fcfd;
     color: rgb(4, 245, 225);
     transition: 0.5s ease-in-out;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    #h1 {
+        font-size: 1.5rem;
+    }
+    
+    #h2 {
+        font-size: 1rem;
+    }
+    
+    #display {
+        font-size: 1.25rem;
+    }
+    
+    .button {
+        line-height: 70px;
+        font-size: 1rem;
+    }
 }
